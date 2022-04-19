@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>首页</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="前端">
+    
+    <link rel="preload" href="/assets/css/0.styles.91f4cd52.css" as="style"><link rel="preload" href="/assets/js/app.054fc44e.js" as="script"><link rel="preload" href="/assets/js/2.35901efe.js" as="script"><link rel="preload" href="/assets/js/10.1a92c96c.js" as="script"><link rel="prefetch" href="/assets/js/3.96867f3b.js"><link rel="prefetch" href="/assets/js/4.fdbbbbcb.js"><link rel="prefetch" href="/assets/js/5.1ed5c5df.js"><link rel="prefetch" href="/assets/js/6.9143bdd2.js"><link rel="prefetch" href="/assets/js/7.d856479d.js"><link rel="prefetch" href="/assets/js/8.324a8495.js"><link rel="prefetch" href="/assets/js/9.85e32783.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.91f4cd52.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="首页" class="logo"> <span class="site-name can-hide">首页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/git/GIT.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  GIT
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/git/GIT.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  GIT
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>GIT相关</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/git/GIT.html" aria-current="page" class="active sidebar-link">GIT</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/git/GIT.html#git工作流" class="sidebar-link">git工作流</a></li><li class="sidebar-sub-header"><a href="/pages/git/GIT.html#commitlint" class="sidebar-link">commitlint</a></li><li class="sidebar-sub-header"><a href="/pages/git/GIT.html#生成changelog-md" class="sidebar-link">生成CHANGELOG.md</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git"><a href="#git" class="header-anchor">#</a> GIT</h1> <h2 id="git工作流"><a href="#git工作流" class="header-anchor">#</a> git工作流</h2> <ul><li>master-一个生产环境完全对应。</li> <li>release- 一个专门上线用的分支（测试+生产...），上线窗口期，或提测的时候就开始下一轮开发。为了不阻塞下个迭代的日常开发，就不能占用 develop 分支。</li> <li>hotfix/xxx（临时），当出现线上紧急 bug，需要马上修复并上线时，不适合直接在 master 上直接操作，所以需要一个临时分支来处理</li> <li>develop-需要一个分支聚合日常开发的所有内容，保持最新的代码，以方便所有协作者同步代码。</li> <li>feature/xxx（临时），每个人的日常开发分支。</li> <li>bugfix/xxx（临时），在提测后的 Debug 阶段，使用 bugfix 分支来与 feature 分支进行区分。</li></ul> <h2 id="commitlint"><a href="#commitlint" class="header-anchor">#</a> commitlint</h2> <p>commit message 包括Header，Body，Footer</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>&amp;lt;type&gt;(&amp;lt;scope&gt;): &amp;lt;subject&gt;
+
+// 空一行
+&amp;lt;body&gt;
+// 空一行
+&amp;lt;footer&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>如：feat(视图层)：新增地区选择器   fix：修复时间选择器偶尔无法选中</p> <p>（1）typetype用于说明 commit 的类别，只允许使用下面7个标识。</p> <ul><li>feat：新功能（feature）</li> <li>fix：修补bug</li> <li>docs：文档（documentation）</li> <li>style：格式（不影响代码运行的变动）</li> <li>refactor：重构（即不是新增功能，也不是修改bug的代码变动）</li> <li>test：增加测试</li> <li>chore：构建过程或辅助工具的变动</li> <li>perf: 提升性能</li></ul> <p>如果type为 feat 和 fix，则该 commit 将肯定出现在 Change log 之中。其他情况（docs、chore、style、refactor、test）由你决定，要不要放入 Change log，建议是不要。</p> <p>（2）scopescope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。</p> <p>（3）subjectsubject是 commit 目的的简短描述，不超过50个字符。</p> <p>撤销以revert:开头</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>
+npm i husky -save-dev
+
+npm set-script prepare &quot;husky install&quot; 
+
+npm run prepare
+
+npx husky add .husky/pre-commit
+// 删除undefined
+
+npx husky add .husky/commit-msg
+// undefined更改为npx --no-install commitlint --edit &quot;$1&quot; 
+
+npm i @commitlint/cli @commitlint/config-conventional -D
+
+echo &quot;module.exports = {extends: ['@commitlint/config-conventional']};&quot; &gt; commitlint.config.js
+// 可能导致报错，非utf8字符不对。手动创建js文件，复制代码
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="生成changelog-md"><a href="#生成changelog-md" class="header-anchor">#</a> 生成CHANGELOG.md</h2> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>
+npm i <span class="token operator">-</span><span class="token constant">D</span> standard<span class="token operator">-</span>version
+
+npm set<span class="token operator">-</span>script release <span class="token string">&quot;standard-version&quot;</span> 
+<span class="token comment">// package.json中script添加&quot;release&quot;:&quot;standard-version&quot;</span>
+
+npm run release
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.054fc44e.js" defer></script><script src="/assets/js/2.35901efe.js" defer></script><script src="/assets/js/10.1a92c96c.js" defer></script>
+  </body>
+</html>

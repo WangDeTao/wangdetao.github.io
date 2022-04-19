@@ -1,0 +1,16 @@
+{
+    "name": "前端",
+    "short_name": "前端",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "description": "前端",
+    "theme_color": "red",
+    "icons": [
+      {
+        "src": "./logo.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }
+    ]
+}
